@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: 
+                url('image-asset.jpeg') no-repeat center center/cover,
+                url('john1.jpg') no-repeat center center/cover,
+                url('john2.jpeg') no-repeat center center/cover;
+            /* Layered background images with cover size */
+        }
+
+        header {
+            background-color: transparent;
+            color: #ffffff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            font-size: 3rem;
+            text-align: center;
+            font-weight: bold;
+            color: #ffffff; /* White color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect */
+            font-family: 'Georgia', serif; /* Different font family for a classy look */
+            transition: transform 0.3s;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            gap: 1rem;
+            margin-top: 1rem;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 0.5rem 0;
+        }
+
+        .nav-links a {
+            color: #fcfcfc;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 2px solid hsl(0, 0%, 100%);
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: #ff0000;
+            color: #333;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            padding: 0 1rem;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem; /* Adjusted font size for the secondary title */
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            margin-bottom: 1rem;
+            color: #ffffff; /* White color */
+        }
+
+        .sentence {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 1rem; /* Add margin between sentences */
+        }
+
+        .sentence p {
+            font-size: 1.5rem;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+            color: #ffffff; /* White color */
+            margin: 0; /* Reset margin */
+            opacity: 0; /* Initially hidden */
+            animation-duration: 3s; /* Animation duration */
+            animation-iteration-count: 1; /* Play animation once */
+            animation-fill-mode: forwards; /* Stay at the end of animation */
+        }
+
+        .left-to-center {
+            animation-name: leftToCenter;
+        }
+
+        .right-to-center {
+            animation-name: rightToCenter;
+        }
+
+        @keyframes leftToCenter {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes rightToCenter {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .btn {
+            background-color: #ff6347;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 2rem; /* Increased margin-top for more spacing */
+            display: inline-block;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+
+        .btn:hover {
+            background-color: #ff4500; /* Darker shade for hover effect */
+        }
+
+        footer {
+            background-color: transparent; /* Transparent background */
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">THE CONTINENTAL HOTELS</div>
+            <ul class="nav-links">
+                <li><a href="destination.html">DESTINATIONS</a></li>
+                <li><a href="about.html">ABOUT THE CONTINENTAL</a></li>
+                <li><a href="holidays.html">CONTINENTAL HOLIDAYS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 style="font-size: 2.5rem;" class="welcome-text">WELCOME TO THE CONTINENTAL</h1>
+            <div class="sentence">
+                <p class="left-to-center">Experience the best dining experience with us.</p>
+                <p class="right-to-center">Immerse yourself in the grandeur of luxury</p>
+            </div>
+            <a href="dishes.html" class="btn">View Menu</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 The Continental Hotels. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript code can be added here if needed
+    </script>
+</body>
+</html>
